@@ -26,8 +26,7 @@ require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
 
-  -- Theme
-  use 'rakr/vim-one'
+  use { 'bluz71/vim-moonfly-colors', branch = 'cterm-compat' }
 
   use 'nvim-treesitter/nvim-treesitter'
 
@@ -64,9 +63,7 @@ end
 
 vim.opt.termguicolors = true
 
-vim.cmd('colorscheme one')
-vim.cmd('set background=dark')
-vim.cmd('let g:one_allow_italics = 1')
+vim.cmd [[colorscheme moonfly]]
 
 local treesitter = require('nvim-treesitter.configs')
 
